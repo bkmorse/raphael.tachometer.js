@@ -1,0 +1,76 @@
+h1. tachometer.raphael.js
+
+This is a library for show tachometer with "Raphaël":http://raphaeljs.com/ .
+
+h2. Project Info
+
+* *Web*: "http://www.code-front.com/tachometer/":http://www.code-front.com/tachometer/
+* *Source*: "http://github.com/codefront/raphael.tachometer.js":http://github.com/codefront/raphael.tachometer.js
+
+h2. Usage
+
+Call @tachometer(value[, options])@ on Raphael Object.
+By default, this library treats @value@ as percentage. This and Many other behaviors are able to change with @options@.
+
+<pre><code class="html">
+<!DOCTYPE html>
+<html>
+<head>
+<title>usage</title>
+<style>
+#canvas {
+  width: 200px;
+  height: 200px;
+}
+</style>
+</head>
+<body>
+<div id="canvas"></div>
+
+<script src="raphael.js"></script>
+<script src="raphael.tachometer.js"></script>
+<script>
+Raphael('canvas').tachometer(45, {number: false});
+</script>
+</body>
+</html>
+</code></pre>
+
+h3. Options
+
+Some options are "Raphael attributes":http://raphaeljs.com/reference.html#Element.attr . Such options are shown as *attr* in below table.
+
+|key|default|explanation|
+|boardMargin|6|margin from boundary between frame and board|
+|boardAttr|attr|board attributes. black gradation by default.|
+|frameSize|6|frame width in pixcel.|
+|outerFrameAttr|attr|outer frame attribute. right gray gradation by default.|
+|innerFrameAttr|attr|inner frame attribute. dark gray gradation by default.|
+|needleMargin|6|margin for needle, from boundary between frame and board.|
+|needlePivotWidth|6|width of pivot circle. inner circle width is half of this.|
+|needleAttr|attr|needle attribute. red triangle by default.|
+|outerNeedlePivotAttr|attr|outer pivot attribute. red circle by default.|
+|innerNeedlePivotAttr|attr|inner pivot attribute. white circle by default.|
+|needleSetAttr|attr|attribute for whole needle.|
+|needleAnimation|true|if true, animate when needle points value.|
+|needleAnimationDuration|700|duration of needle animation.|
+|needleAnimationEasing|bounce|easing of needle animation.|
+|number|true|if true, show number(scale markings) of long scale.|
+|numberMargin|34|margin for number, from boundary between frame and board.|
+|numberAttr|attr|number attribute, white, serif and 10px by default.|
+|numberMin|0|min value of scale marking.|
+|numberMax|100|max value of scale marking.|
+|numberUnit|%|unit of scale markings. append to minimum value.|
+|scaleLength|10|rect length of scale in pixcel.|
+|scaleWidth|3|rect width of scale in pixcel.|
+|scaleAttr|attr|scale attribute. while rect by default.|
+|scaleAngleStart|0|start of scale angle in 0 to 360. center bottom of canvas is 0, center top is 180.|
+|scaleAngleEnd|270|end of scale angle in 0 to 360. center bottom of canvas is 0, center top is 180.|
+|longScaleCount|10|Amount of long scale.|
+|shortScaleCount|50|Amount of short scale.|
+|interactive|false|if true, return instance of Tachometer.|
+
+h2. License
+
+This product is licensed under MIT.
+Feel free to fork me!
