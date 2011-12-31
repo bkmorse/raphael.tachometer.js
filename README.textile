@@ -1,4 +1,4 @@
-h1. tachometer.raphael.js
+h1. raphael.tachometer.js
 
 This is a library for show tachometer with "Raphaël":http://raphaeljs.com/ .
 
